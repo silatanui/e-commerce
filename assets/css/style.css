@@ -1,0 +1,150 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    /* font-family: ; */
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+/* #####################################################
+Header 
+######################################################### */
+header{
+    background-color: black;
+}
+header ul{
+    display: flex;
+    gap:20px;
+    list-style: none;
+    padding: 10px 4%;
+    justify-content: end;
+}
+header ul a{
+    color: white;
+    transition: all .2s;
+}
+header ul a:hover{
+    color: red;
+    transform: translateY(2px);
+}
+
+
+/* #####################################################
+Nav Section
+######################################################### */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* box-shadow: 1px 1px 10px gray; */
+    background-color: rgb(0, 129, 22);
+
+    padding: 5px 2%;
+}
+.logo{
+    color: white;
+    font-size: 2rem;
+}
+nav .logo span{
+    color: red;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+
+}
+nav ul a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    margin-top: 10px;
+}
+nav ul a:hover{
+    color: red;
+    text-decoration: none;
+}
+nav .nav_btn{
+    color: white;
+    background-color: red;
+    padding: 8px 20px;
+    border: none;
+    transition: all .3s;
+}
+nav .nav_btn:hover{
+    background-color: brown;
+}
+
+
+/* Responsive Design */
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    .nav_links {
+        display: none;
+        /* Existing styles for the nav links in the small screen media query */
+    }
+
+    nav .nav_btn{
+        display: none;
+    }
+    /* Position the toggle button */
+    .toggle_btn {
+        display: block;
+    }
+
+    /* Hide the navigation links initially */
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    /* Show the navigation links when the toggle is checked */
+    input[type="checkbox"]:checked + .nav_links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        box-shadow: 2px 2px 10px gray;
+        padding: 10px;
+        z-index: 11;
+    }
+
+    .nav_links a {
+        color: rgb(51, 48, 48);
+    }
+
+    /* Adjust position of Download CV button */
+    .btn_nav {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* Hero Section */
+
+/* Custom CSS for fade-in carousel */
+/* .carousel-item {
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.carousel-item.active {
+    opacity: 1;
+} */
+
+.card-title{
+    color: red;
+}
+.card-text{
+    line-height: 1.1rem;
+    font-family: "Montserrat";
+}
